@@ -4,7 +4,7 @@ opts=\
 dversionmangle=auto,\
 repacksuffix=+ds,\
 filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/requirejs-$1.tar.gz/ \
- https://github.com/requirejs/r.js/tags .*/archive/v?([\d\.]+).tar.gz debian
+ https://github.com/requirejs/r.js/tags .*?(\d[\d\.]+).tar.gz group
 
-opts="searchmode=plain,component=types-requirejs,pgpmode=none" \
- https://registry.npmjs.org/@types/requirejs https://registry.npmjs.org/@types/requirejs/-/requirejs-([\d\.]+)@ARCHIVE_EXT@ ignore
+opts="searchmode=plain,ctype=nodejs,component=types-requirejs,pgpmode=none" \
+ https://registry.npmjs.org/@types/requirejs https://registry.npmjs.org/@types/requirejs/-/requirejs-([\d\.]+)@ARCHIVE_EXT@ group
