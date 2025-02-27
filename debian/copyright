@@ -86,7 +86,7 @@ License: Expat
 Files: debian/*
 Copyright: 2014- Laszlo Boszormenyi (GCS) <gcs@debian.org>,
  2013- Georges Khaznadar <georgesk@debian.org>
- 2020 Xavier Guimard <yadd@debian.org>
+ 2020 Yadd <yadd@debian.org>
 License: GPL-2+
 
 Files: tests/node/pluginLocalId/lib/coffee-script.js

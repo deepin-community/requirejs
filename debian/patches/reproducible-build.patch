@@ -1,0 +1,15 @@
+Description: Make the build reproducible
+Author: Chris Lamb <lamby@debian.org>
+Last-Update: 2020-11-27
+
+--- a/copydist.js
++++ b/copydist.js
+@@ -1,7 +1,7 @@
+ #!/usr/bin/env node
+ 
+ var fs = require('fs'),
+-    stamp = (new Date()).toUTCString(),
++    stamp = (new Date(process.env.SOURCE_DATE_EPOCH ? (process.env.SOURCE_DATE_EPOCH * 1000) : new Date().getTime())).toUTCString(),
+     exec = require('child_process').exec,
+     distFileName = 'dist/r.js',
+     count = 0,
